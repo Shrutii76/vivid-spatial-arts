@@ -15,7 +15,7 @@ const WireframeSphere = ({ position, scale = 1, rotationSpeed = 0.01 }: {
     if (meshRef.current) {
       meshRef.current.rotation.x += rotationSpeed;
       meshRef.current.rotation.y += rotationSpeed * 1.2;
-      meshRef.current.position.y = position[1] + Math.sin(state.clock.elapsedTime * 0.5) * 0.3;
+      meshRef.current.position.y = position[1] + Math.sin(state.clock.elapsedTime * 0.2) * 0.3;
     }
   });
 
@@ -111,7 +111,7 @@ export const GeometricScene = () => {
         <pointLight position={[10, 10, 10]} intensity={1} />
         
         {/* Single central sphere */}
-        <WireframeSphere position={[0, 0, 0]} scale={2} rotationSpeed={0.005} />
+        <WireframeSphere position={[0, 0, 0]} scale={4} rotationSpeed={0.002} />
         
         <OrbitControls 
           enableZoom={false} 
