@@ -110,22 +110,8 @@ export const GeometricScene = () => {
         <ambientLight intensity={0.5} />
         <pointLight position={[10, 10, 10]} intensity={1} />
         
-        {/* Main central sphere */}
+        {/* Single central sphere */}
         <WireframeSphere position={[0, 0, 0]} scale={2} rotationSpeed={0.005} />
-        
-        {/* Surrounding spheres */}
-        <WireframeSphere position={[-4, 2, -2]} scale={1.2} rotationSpeed={0.008} />
-        <WireframeSphere position={[4, -1, -3]} scale={0.8} rotationSpeed={0.012} />
-        <WireframeSphere position={[2, 3, 1]} scale={1} rotationSpeed={0.007} />
-        <WireframeSphere position={[-3, -2, 2]} scale={1.5} rotationSpeed={0.006} />
-        
-        {/* Floating rings */}
-        <FloatingRings position={[0, 0, -5]} count={4} />
-        <FloatingRings position={[6, 0, 0]} count={3} />
-        <FloatingRings position={[-6, 0, 0]} count={3} />
-        
-        {/* Particle field */}
-        <ParticleField />
         
         <OrbitControls 
           enableZoom={false} 
